@@ -1,0 +1,40 @@
+<SystemMonitor>:  
+    orientation: 'vertical'  
+    padding: 10  
+    spacing: 10  
+
+    canvas.before:  
+        Color:  
+            rgba: 0.1, 0.1, 0.1, 1  
+        Rectangle:  
+            pos: self.pos  
+            size: self.size  
+
+    Label:  
+        text: 'Monitor de Recursos del Sistema'  
+        font_size: '24sp'  
+        size_hint_y: 0.1  
+
+    BoxLayout:  
+        orientation: 'vertical'  
+        spacing: 5  
+
+        Label:  
+            text: root.cpu_text  
+            text_size: self.size  
+            halign: 'left'  
+
+        Label:  
+            text: root.memory_text  
+            text_size: self.size  
+            halign: 'left'  
+
+        Label:  
+            text: root.disk_text  
+            text_size: self.size  
+            halign: 'left'  
+
+        Label:  
+            text: root.network_text  
+            text_size: self.size  
+            halign: 'left'  
